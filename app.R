@@ -8,10 +8,12 @@ for (package in packages) {
 		library(package, character.only = TRUE)
 }
 
+# Redundant library calls seem to be necessary for RStudio Connect.
 library(shiny)
 library(dplyr)
 library(Seurat)
 library(ggplot2)
+
 
 # Stuff that is run once, when the Shiny app launches.
 integrated.0h.1h_4h_16h_27h_36h_48h <- readRDS("data/integrated.0h.1h_4h_16h_27h_36h_48h.rds")

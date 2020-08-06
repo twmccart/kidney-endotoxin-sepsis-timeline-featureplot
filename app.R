@@ -2,15 +2,16 @@ packages <- c("shiny", "dplyr", "Seurat", "ggplot2")
 
 for (package in packages) {
 	if (!require(package, character.only = TRUE)) {
-		install.packages(package, dependencies = TRUE)
+		install.packages(package, dependencies = TRUE, repos = "http://cran.us.r-project.org")
 		library(package, character.only = TRUE)
-	}
+	} else
+		library(package, character.only = TRUE)
 }
 
-# library(shiny)
-# library(dplyr)
-# library(Seurat)
-# library(ggplot2)
+library(shiny)
+library(dplyr)
+library(Seurat)
+library(ggplot2)
 
 # Stuff that is run once, when the Shiny app launches.
 integrated.0h.1h_4h_16h_27h_36h_48h <- readRDS("data/integrated.0h.1h_4h_16h_27h_36h_48h.rds")

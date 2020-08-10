@@ -63,7 +63,7 @@ ui <- fluidPage(
 				inputId = "pt_size",
 				label = "Point size",
 				min = 0.0,
-				max = 0.5,
+				max = 1,
 				value = 0.01
 			),
 			img(src = "umap_img.jpg",
@@ -109,6 +109,7 @@ server <- function(input, output) {
 			split.by = {if (input$timesplit) "hrs" else NULL},
 			pt.size = input$pt_size,
 			by.col = FALSE,
+			order = TRUE,
 			combine = FALSE
 		)
 	})

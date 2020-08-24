@@ -83,7 +83,9 @@ ui <- fluidPage(
 	fluidRow(
 		column(width = 1, align = "center", img(src="iu_tab_web.png", width="100%")),
 		column(width = 11,
-			p( "Thomas McCarthy",
+			p( "Danielle Janosevic",
+				br(),
+				"Thomas McCarthy",
 				br(),
 				"Takashi Hato",
 				a("thato@iu.edu", href="mailto:thato@iu.edu")
